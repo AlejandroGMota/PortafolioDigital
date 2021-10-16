@@ -4,19 +4,23 @@
     list-style: none;
 
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 0px;
     height: 7px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background: rgba(78, 78, 78, 0.014);
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: rgb(255, 255, 255);
     border-radius: 10px;
 
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: rgb(109, 109, 109);
 }
 
@@ -64,18 +68,22 @@ nav a:hover {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 90%;
     margin: 0 0 0 5%;
-    padding-top:10vw;
+    padding-top: 10vw;
 }
+
 #inicio h1 {
     font-size: clamp(1.8rem, 4vw, 8rem);
 }
-#inicio .biografia{
+
+#inicio .biografia {
     margin: 15vw 0 0 50%;
 }
+
 #inicio p {
     font-size: clamp(1rem, 2vw, 2rem);
     display: block;
 }
+
 #inicio button {
     width: 20vw;
     height: 7vw;
@@ -90,6 +98,7 @@ h2 {
     font-family: Verdana, Tahoma, sans-serif;
     font-size: clamp(1.5rem, 2vw, 4rem);
 }
+
 #proyectos-web {
     margin-top: 30px;
     width: 90%;
@@ -165,60 +174,136 @@ h2 {
     margin-left: 5%;
 }
 
-.infografia-list{
+.infografia-list {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
-    overflow-x:auto;
+    overflow-x: auto;
 }
-.infografia{
+
+.infografia {
     margin: 0 0 0 15px;
 }
-.infografia a img{
+
+.infografia a img {
     border-radius: 15px;
-    width: 20vw;
-    min-width:240px ;
+    width: 29vw;
+    min-width: 240px;
+    max-width: 420px;
 }
 
 #locucion-comercial {
     width: 90%;
     margin: 30px 0 0 5%;
 }
-#locucion-comercial .main-locucion{
+
+#locucion-comercial .main-locucion {
     margin-top: 15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
-.player{
-    height: 240px; 
-    max-width: 360px;
-    min-width: 280px;
-    background-color: #312E2D;
-}
-.locucion-list{
-    min-width: 280px;
-    background-color: #CDCDCD;
+    justify-content: center;
 }
 
+.player {
+    height: 240px;
+    max-width: 680px;
+    min-width: 280px;
+    background-color: #312E2D;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+#audio-name{
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1.8rem, 2vw, 2rem);
+}
+.time{
+    display: flex;
+    width: 100%;
+    justify-content: space-between; 
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+.player-level {
+    width: 100%;
+}
+
+#btn-play {
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #666769;
+}
+#btn-play img{
+    height: 45px;
+    padding: 0 0 0 5px;
+}
+#pause-icon{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+#mute{
+    margin:0 15px;
+}
+#volume-slider {
+    width: 35%;
+}
+
+
+.locucion-list {
+    max-width: 420px;
+    min-width: 280px;
+    background-color: #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #312E2D;
+    padding: 15px ;
+    border-radius: 15px;
+    margin:  15px 0 0 15px;
+}
+.locucion-list li{
+    width: 100%;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    border-top: solid 1px #312E2D;
+    text-align: center;
+    padding-bottom: 30px ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.locucion-list li:hover {
+    color: #3e3e3f;
+    text-shadow: 2px 3px 3px #dfcabc, 0px 0px 7px #000000 ;
+}
 #contactame {
     width: 90%;
     margin-left: 5%;
 }
-.contacto-list{
+
+.contacto-list {
     background-color: #666769;
     text-align: center;
     border-radius: 15px;
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 5vw;
 }
+
 .logo-contacts {
     height: 64px;
 }
-.contacto{
+
+.contacto {
     margin: 2vw;
     display: flex;
     align-items: center;
@@ -226,7 +311,8 @@ h2 {
     min-width: 240px;
 
 }
-.contacto a{
+
+.contacto a {
     color: #ffffff;
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -235,6 +321,7 @@ h2 {
     transition: .25s ease-in-out;
     margin-left: 10px;
 }
+
 .contacto a:hover {
     color: #dfcabc;
     text-shadow: 2px 3px 7px #000000;

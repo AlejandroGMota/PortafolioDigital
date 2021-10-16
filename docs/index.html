@@ -72,26 +72,36 @@
 
     <div id="infografias">
         <h2>Infografías</h2>
-            <ul class="infografia-list">
-                <li class="infografia" style="margin: 0;"><a href=""><img
-                            src="./img/infographics/min-EjesSustentabilidad.png"
-                            alt="Infografia de Ejes de la Sustentabilidad"></a></li>
-                <li class="infografia"><a href=""><img src="./img/infographics/min-EstrategiaVentas.png"
-                            alt="Infografia de Estrategias de Ventas"></a></li>
-                <li class="infografia"><a href=""><img src="./img/infographics/min-FilosofiaExistencial.png"
-                            alt="Infografia de la Filosofia Existencial"></a></li>
-                <li class="infografia"><a href=""><img src="./img/infographics/min-Presupuesto.png"
-                            alt="Infografia del Presupuesto"></a></li>
-                <li class="infografia"><a href=""><img src="./img/infographics/min-SistemasOperativos.png"
-                            alt="Infografia de los Sistemas Operativos"></a></li>
-            </ul>
+        <ul class="infografia-list">
+            <li class="infografia" style="margin: 0;"><a href=""><img
+                        src="./img/infographics/min-EjesSustentabilidad.png"
+                        alt="Infografia de Ejes de la Sustentabilidad"></a></li>
+            <li class="infografia"><a href=""><img src="./img/infographics/min-EstrategiaVentas.png"
+                        alt="Infografia de Estrategias de Ventas"></a></li>
+            <li class="infografia"><a href=""><img src="./img/infographics/min-FilosofiaExistencial.png"
+                        alt="Infografia de la Filosofia Existencial"></a></li>
+            <li class="infografia"><a href=""><img src="./img/infographics/min-Presupuesto.png"
+                        alt="Infografia del Presupuesto"></a></li>
+            <li class="infografia"><a href=""><img src="./img/infographics/min-SistemasOperativos.png"
+                        alt="Infografia de los Sistemas Operativos"></a></li>
+            <li class="infografia"><a href=""><img src="./img/infographics/min-EstudioTecnico.png"
+                        alt="Infografia del Estudio Tecnico"></a></li>
+        </ul>
     </div>
     <div id="locucion-comercial">
         <div class="main-locucion">
             <div>
-                <h2>Locucion comercial</h2>
+                <h2 style="text-align: center;">Locucion comercial</h2>
                 <div class="player">
-
+                    <p id="audio-name">nombre del audio</p>
+                    <div class="time"><span id="current-time">0:00</span><span id="duration">0:00</span></div>
+                    <input type="range" value="20" min="0" class="player-level">
+                    <button id="btn-play"><img src=".//img/componets/play.png" id="play-icon"><img src="./img/componets/pause.png" id="pause-icon"></button>
+                    <img src="./img/componets/mute-icon.png" id="mute">
+                    <input type="range" id="volume-slider" max="100" value="100">
+                    <audio id="audio">
+                        <source src="./audio/mexico-digital.mp3" type="audio/mpeg">
+                    </audio>
                 </div>
             </div>
             <ul class="locucion-list">
@@ -104,12 +114,17 @@
     <div id="contactame">
         <h2>Contáctame</h2>
         <ul class="contacto-list">
-            <li class="contacto"><img class="logo-contacts" src="./img/contacts/LinkedIn.png" alt="Logo de LinkedIn"><a href="https://www.linkedin.com/in/eagm137/">Enrique Alejandro Garcia Mota</a></li>
-            <li class="contacto"><img class="logo-contacts" src="./img/contacts/GitHub.png" alt="Logo de GitHub"><a href="https://github.com/EnriqueAGarcia">Enrique Alejandro Garcia Mota</a></li>
-            <li class="contacto"><img class="logo-contacts" src="./img/contacts/Gmail.png" alt="Logo de Gmail"><a href="mailto:cmke14y@gmail.com">Enrique Alejandro Garcia Mota</a></li>
-            <li class="contacto"><img class="logo-contacts" src="./img/contacts/Twitter.png" alt="Logo de Twitter"><a href="https://twitter.com/EnriqueAGMota">@EnriqueAGMota</a></li>
+            <li class="contacto"><img class="logo-contacts" src="./img/contacts/LinkedIn.png" alt="Logo de LinkedIn"><a
+                    href="https://www.linkedin.com/in/eagm137/">Enrique Alejandro Garcia Mota</a></li>
+            <li class="contacto"><img class="logo-contacts" src="./img/contacts/GitHub.png" alt="Logo de GitHub"><a
+                    href="https://github.com/EnriqueAGarcia">Enrique Alejandro Garcia Mota</a></li>
+            <li class="contacto"><img class="logo-contacts" src="./img/contacts/Gmail.png" alt="Logo de Gmail"><a
+                    href="mailto:cmke14y@gmail.com">Enrique Alejandro Garcia Mota</a></li>
+            <li class="contacto"><img class="logo-contacts" src="./img/contacts/Twitter.png" alt="Logo de Twitter"><a
+                    href="https://twitter.com/EnriqueAGMota">@EnriqueAGMota</a></li>
         </ul>
     </div>
+    <script src="./audio-player.js"></script>
 </body>
 
 </html>

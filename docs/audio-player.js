@@ -1,0 +1,1 @@
+let btnplay=document.getElementById('btn-play')
