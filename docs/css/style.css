@@ -243,15 +243,20 @@ h2 {
 }
 #btn-play img{
     height: 45px;
-    padding: 0 0 0 5px;
+}
+#play-icon{
+    margin: 0 5px 0 0;
+    
 }
 #pause-icon{
-    visibility: hidden;
-    width: 0;
-    height: 0;
+    margin: 0 17px 0 0;
+    display: none;
 }
 #mute{
     margin:0 15px;
+}
+#mute img{
+    height: 42px;
 }
 #volume-slider {
     width: 35%;
@@ -278,6 +283,10 @@ h2 {
     text-align: center;
     padding-bottom: 30px ;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.locucion-list a{
+    text-decoration: none;
+    color: #000000;
 }
 .locucion-list li:hover {
     color: #3e3e3f;

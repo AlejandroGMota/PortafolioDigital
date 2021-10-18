@@ -38,7 +38,7 @@
             <div class="main-container-proyects a">
                 <div class="container-proyect">
                     <a href="https://enriqueagarcia.github.io/ToDoList/"><img class="img-carousel"
-                            src="./img/Proyectos web/Listas-tareas.jpg" title="abrir pagina"></a>
+                            src="./img/Proyectos web/Listas-tareas.jpg" title="Abrir Página"></a>
                     <div class="fooder-proyect">
                         <p>Lista de tareas</p><a href="https://github.com/EnriqueAGarcia/ToDoList"><img
                                 class="img-github" src="./img/componets/github-boton.png"></a>
@@ -49,7 +49,7 @@
             <div class="main-container-proyects b">
                 <div class="container-proyect">
                     <a href="https://enriqueagarcia.github.io/Blackjack/"><img class="img-carousel"
-                            src="./img/Proyectos web/Blackjack-21.jpg" title="abrir pagina"></a>
+                            src="./img/Proyectos web/Blackjack-21.jpg" title="Abrir Página"></a>
                     <div class="fooder-proyect">
                         <p>Blackjack 21</p><a href="https://github.com/EnriqueAGarcia/Blackjack"><img class="img-github"
                                 src="./img/componets/github-boton.png"></a>
@@ -60,7 +60,7 @@
             <div class="main-container-proyects c">
                 <div class="container-proyect">
                     <a href="https://unstrung-billet.000webhostapp.com/"><img class="img-carousel"
-                            src="./img/Proyectos web/Aplicaciones-web.jpg" title="abrir pagina"></a>
+                            src="./img/Proyectos web/Aplicaciones-web.jpg" title="Abrir Página"></a>
                     <div class="fooder-proyect">
                         <p>Aplicaciones web</p><a href=""><img class="img-github"
                                 src="./img/componets/github-boton.png"></a>
@@ -93,21 +93,22 @@
             <div>
                 <h2 style="text-align: center;">Locucion comercial</h2>
                 <div class="player">
-                    <p id="audio-name">nombre del audio</p>
-                    <div class="time"><span id="current-time">0:00</span><span id="duration">0:00</span></div>
-                    <input type="range" value="20" min="0" class="player-level">
+                    <p id="audio-name">Prueba De Voz</p>
+                    <div class="time"><span id="concurrent-time">0:00</span><span id="duration">0:00</span></div>
+                    <input type="range" value="0" min="0" class="player-level">
                     <button id="btn-play"><img src=".//img/componets/play.png" id="play-icon"><img src="./img/componets/pause.png" id="pause-icon"></button>
-                    <img src="./img/componets/mute-icon.png" id="mute">
+                    
+                    <a href="#locucion-comercial" id="mute"><img src="./img/componets/unmute-icon.png"></a>
                     <input type="range" id="volume-slider" max="100" value="100">
                     <audio id="audio">
-                        <source src="./audio/mexico-digital.mp3" type="audio/mpeg">
-                    </audio>
+                        <source src="./audio/prueba-de-voz.ogg" type="audio/ogg">
+                    </audio>                    
                 </div>
             </div>
             <ul class="locucion-list">
-                <li>Prueba de voz</li>
-                <li>México digital</li>
-                <li>Manejo del procesador por el sistema operativo </li>
+                <li ><a href="#locucion-comercial" id="prueba-de-voz">Prueba de voz</a></li>
+                <li ><a href="#locucion-comercial" id="mexico-digital">México digital</a></li>
+                <li><a href="#locucion-comercial" id="audio-prueba">audio pendiente</a> </li>
             </ul>
         </div>
     </div>
@@ -115,13 +116,13 @@
         <h2>Contáctame</h2>
         <ul class="contacto-list">
             <li class="contacto"><img class="logo-contacts" src="./img/contacts/LinkedIn.png" alt="Logo de LinkedIn"><a
-                    href="https://www.linkedin.com/in/eagm137/">Enrique Alejandro Garcia Mota</a></li>
+                    href="https://www.linkedin.com/in/eagm137/" target="_blank" title="Abrir en otra pestaña">Enrique Alejandro Garcia Mota</a></li>
             <li class="contacto"><img class="logo-contacts" src="./img/contacts/GitHub.png" alt="Logo de GitHub"><a
-                    href="https://github.com/EnriqueAGarcia">Enrique Alejandro Garcia Mota</a></li>
+                    href="https://github.com/EnriqueAGarcia" target="_blank" title="Abrir en otra pestaña">Enrique Alejandro Garcia Mota</a></li>
             <li class="contacto"><img class="logo-contacts" src="./img/contacts/Gmail.png" alt="Logo de Gmail"><a
-                    href="mailto:cmke14y@gmail.com">Enrique Alejandro Garcia Mota</a></li>
+                    href="mailto:cmke14y@gmail.com" target="_blank" title="Abrir en otra pestaña">Enrique Alejandro Garcia Mota</a></li>
             <li class="contacto"><img class="logo-contacts" src="./img/contacts/Twitter.png" alt="Logo de Twitter"><a
-                    href="https://twitter.com/EnriqueAGMota">@EnriqueAGMota</a></li>
+                    href="https://twitter.com/EnriqueAGMota" target="_blank" title="Abrir en otra pestaña">@EnriqueAGMota</a></li>
         </ul>
     </div>
     <script src="./audio-player.js"></script>
