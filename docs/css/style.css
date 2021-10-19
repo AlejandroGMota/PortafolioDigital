@@ -181,11 +181,11 @@ h2 {
     overflow-x: auto;
 }
 
-.infografia {
+.min-infografia {
     margin: 0 0 0 15px;
 }
 
-.infografia a img {
+.min-infografia a img {
     border-radius: 15px;
     width: 29vw;
     min-width: 240px;
