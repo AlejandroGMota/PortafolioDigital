@@ -1,5 +1,5 @@
 #viewer {
-    visibility: hidden; /*hidden*/
+    visibility: hidden;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

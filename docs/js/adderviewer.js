@@ -1,5 +1,6 @@
 const viewer = document.getElementById('viewer'),
-    infografia = document.querySelectorAll('.min-infografia');
+    infografia = document.querySelectorAll('.min-infografia'),
+    leerMas = document.getElementById('leer-mas');
 
 
 for (let i = 0; i < infografia.length; i++) {
@@ -39,6 +40,7 @@ for (let i = 0; i < infografia.length; i++) {
         viewer.style.visibility = "visible";
         disableScroll();
         flechas(i)
+        cerrar()
     })
 
     function flechas(i) {
@@ -76,20 +78,23 @@ function innerViewer(nameInfo, srcInfo, i) {
     const btnPrevious = document.getElementById('previous'),
         btnNext = document.getElementById('next');
     if (i == 0) {
-        btnPrevious.style.visibility='hidden'
+        btnPrevious.style.visibility = 'hidden'
     }
-    if (i == infografia.length-1) {
-        btnNext.style.visibility='hidden'
+    if (i == infografia.length - 1) {
+        btnNext.style.visibility = 'hidden'
     }
 }
-window.addEventListener('click', function (e) {
-    const containerViewer = document.getElementById('container-viewer');
 
-    if (e.target == viewer || e.target == containerViewer) {
-        viewer.style.visibility = 'hidden';
-        enableScroll();
-    }
-});
+function cerrar() {
+    window.addEventListener('click', function a(e) {
+        const containerViewer = document.getElementById('container-viewer');
+        if (e.target == viewer || e.target == containerViewer) {
+            viewer.style.visibility = 'hidden';
+            enableScroll();
+        }
+    });
+}
+
 
 function disableScroll() {
     let x = window.scrollX;
@@ -102,3 +107,24 @@ function disableScroll() {
 function enableScroll() {
     window.onscroll = null;
 }
+let use = false;
+leerMas.addEventListener('click', () => {
+    const mas = document.getElementById('mas')
+
+    if (use == false) {
+        mas.style.visibility = "visible"
+        mas.style.height = "300px"
+        mas.style.display = "flex"
+        mas.style.margin = "10px 0"
+        mas.style.padding = "15px"
+        use = true
+    }else{
+        mas.style.visibility = "hidden"
+        mas.style.height = "0"
+        mas.style.display = "flex"
+        mas.style.margin = "0"
+        mas.style.padding = "0"
+        use = false;
+    }
+
+})
