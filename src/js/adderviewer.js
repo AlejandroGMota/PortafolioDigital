@@ -71,7 +71,7 @@ function innerViewer(nameInfo, srcInfo, i) {
             <h2>${nameInfo}</h2>
             <div id="container-viewer";>
                 <button id="previous"><img src="./img/componets/previous.png" alt="botón anterior" title="Anterior infografía"></button>
-                <img class="infografia" src="./img/infographics/${srcInfo}.png" alt="Infografia de Ejes de la Sustentabilidad">
+                <img class="infografia" src="./img/infographics/${srcInfo}.jpeg" alt="Infografia de Ejes de la Sustentabilidad">
                 <button id="next"><img src="./img/componets/next.png" alt="botón siguiente" title="Siguiente infografía"></button>
             </div>
             `

@@ -1,9 +1,130 @@
-const a=document.getElementById("viewer"),c=document.querySelectorAll(".min-infografia"),e=document.getElementById("leer-mas");for(let e=0;e<c.length;e++){let o,s;function l(e){switch(e){case 0:o="Ejes De La Sustentabilidad";s="EjesSustentabilidad";break;case 1:o="Estrategia De Ventas";s="EstrategiaVentas";break;case 2:o="Filosofía Existencial";s="FilosofiaExistencial";break;case 3:o="Presupuesto";s=o;break;case 4:o="Sistemas Operativos";s="SistemasOperativos";break;case 5:o="Estudio Técnico";s="EstudioTecnico";break}}c[e].addEventListener("click",()=>{l(e);d(o,s,e);a.style.visibility="visible";t();r(e);i()});function r(e){let i;const t=document.getElementById("previous"),n=document.getElementById("next");t.addEventListener("click",()=>{i=e-1;l(i);d(o,s,i);r(i)});n.addEventListener("click",()=>{i=e+1;l(i);d(o,s,i);r(i)})}}function d(e,i,t){a.innerHTML=`
+const viewer = document.getElementById('viewer'),
+    infografia = document.querySelectorAll('.min-infografia'),
+    leerMas = document.getElementById('leer-mas');
+
+
+for (let i = 0; i < infografia.length; i++) {
+    let nameInfo, srcInfo;
+
+    function casos(caso) {
+        switch (caso) {
+            case 0:
+                nameInfo = 'Ejes De La Sustentabilidad'
+                srcInfo = 'EjesSustentabilidad'
+                break;
+            case 1:
+                nameInfo = 'Estrategia De Ventas'
+                srcInfo = 'EstrategiaVentas'
+                break;
+            case 2:
+                nameInfo = 'Filosofía Existencial'
+                srcInfo = 'FilosofiaExistencial'
+                break;
+            case 3:
+                nameInfo = 'Presupuesto'
+                srcInfo = nameInfo
+                break;
+            case 4:
+                nameInfo = 'Sistemas Operativos'
+                srcInfo = 'SistemasOperativos'
+                break;
+            case 5:
+                nameInfo = 'Estudio Técnico'
+                srcInfo = 'EstudioTecnico'
+                break;
+        }
+    }
+    infografia[i].addEventListener('click', () => {
+        casos(i)
+        innerViewer(nameInfo, srcInfo, i)
+        viewer.style.visibility = "visible";
+        disableScroll();
+        flechas(i)
+        cerrar()
+    })
+
+    function flechas(i) {
+        let caso
+
+        const btnPrevious = document.getElementById('previous'),
+            btnNext = document.getElementById('next');
+
+        btnPrevious.addEventListener('click', () => {
+            caso = i - 1
+            casos(caso);
+            innerViewer(nameInfo, srcInfo, caso)
+            flechas(caso)
+        })
+        btnNext.addEventListener('click', () => {
+            caso = i + 1
+            casos(caso);
+            innerViewer(nameInfo, srcInfo, caso)
+            flechas(caso)
+        })
+    }
+
+}
+
+function innerViewer(nameInfo, srcInfo, i) {
+    viewer.innerHTML = `
             <link rel="stylesheet" href="./css/viewer.css">
-            <h2>${e}</h2>
+            <h2>${nameInfo}</h2>
             <div id="container-viewer";>
                 <button id="previous"><img src="./img/componets/previous.png" alt="botón anterior" title="Anterior infografía"></button>
-                <img class="infografia" src="./img/infographics/${i}.png" alt="Infografia de Ejes de la Sustentabilidad">
+                <img class="infografia" src="./img/infographics/${srcInfo}.jpeg" alt="Infografia de Ejes de la Sustentabilidad">
                 <button id="next"><img src="./img/componets/next.png" alt="botón siguiente" title="Siguiente infografía"></button>
             </div>
-            `;const n=document.getElementById("previous"),o=document.getElementById("next");if(t==0){n.style.visibility="hidden"}if(t==c.length-1){o.style.visibility="hidden"}}function i(){window.addEventListener("click",function t(e){const i=document.getElementById("container-viewer");if(e.target==a||e.target==i){a.style.visibility="hidden";n()}})}function t(){let e=window.scrollX;let i=window.scrollY;window.onscroll=function(){window.scrollTo(e,i)}}function n(){window.onscroll=null}let o=false;e.addEventListener("click",()=>{const e=document.getElementById("mas");if(o==false){e.style.visibility="visible";e.style.height="300px";e.style.display="flex";e.style.margin="10px 0";e.style.padding="15px";o=true}else{e.style.visibility="hidden";e.style.height="0";e.style.display="flex";e.style.margin="0";e.style.padding="0";o=false}});
+            `
+    const btnPrevious = document.getElementById('previous'),
+        btnNext = document.getElementById('next');
+    if (i == 0) {
+        btnPrevious.style.visibility = 'hidden'
+    }
+    if (i == infografia.length - 1) {
+        btnNext.style.visibility = 'hidden'
+    }
+}
+
+function cerrar() {
+    window.addEventListener('click', function a(e) {
+        const containerViewer = document.getElementById('container-viewer');
+        if (e.target == viewer || e.target == containerViewer) {
+            viewer.style.visibility = 'hidden';
+            enableScroll();
+        }
+    });
+}
+
+
+function disableScroll() {
+    let x = window.scrollX;
+    let y = window.scrollY;
+    window.onscroll = function () {
+        window.scrollTo(x, y)
+    };
+}
+
+function enableScroll() {
+    window.onscroll = null;
+}
+let use = false;
+leerMas.addEventListener('click', () => {
+    const mas = document.getElementById('mas')
+
+    if (use == false) {
+        mas.style.visibility = "visible"
+        mas.style.height = "300px"
+        mas.style.display = "flex"
+        mas.style.margin = "10px 0"
+        mas.style.padding = "15px"
+        use = true
+    }else{
+        mas.style.visibility = "hidden"
+        mas.style.height = "0"
+        mas.style.display = "flex"
+        mas.style.margin = "0"
+        mas.style.padding = "0"
+        use = false;
+    }
+
+})
