@@ -214,7 +214,7 @@ h2 {
 
 .player {
     height: 240px;
-    max-width: 680px;
+    max-width: 420px;
     min-width: 280px;
     background-color: #312E2D;
     padding: 25px;
@@ -281,7 +281,7 @@ h2 {
     color: #312E2D;
     padding: 15px ;
     border-radius: 15px;
-    margin:  15px 0 0 15px;
+    margin:  15px 15px 0 15px;
 }
 .locucion-list li{
     width: 100%;
