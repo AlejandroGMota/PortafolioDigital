@@ -23,7 +23,7 @@ for (let i = 0; i < audioSelector.length; i++) {
         pauseIcon.style.display = 'block'
         setTimeout(() => {
             audioLarge()
-        }, 70)
+        }, 150)
     });
 }
 btnPlay.addEventListener('click', () => {
