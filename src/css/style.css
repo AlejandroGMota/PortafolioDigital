@@ -29,7 +29,9 @@ body {
     background-color: black;
     color: #F1E5DD;
 }
-
+header{
+    background-color: #666769;
+}
 nav {
     background-color: #666769;
     width: 100%;
