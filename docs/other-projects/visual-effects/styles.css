@@ -1,7 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 body{
-    background-image: linear-gradient(#e0f3ff, #4383ea);
+    background-image: linear-gradient(#3BE3E0, #E352C0);
 
+}
+.infographic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} 
+h2{
+    font-size: 2em;
+}
+.infographic div{
+    width: 60%;
+    border: 15px solid #ff0aad0c;
+    margin: 1px 0;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    background-color: #856ea334;
+    flex-direction: column;
+}
+.infographic div div{
+    width:  100%;
+    min-width: 530px;   
+    display: flex;
+    flex-direction: row;
+    padding: 5% 0;
+
+}
+.infographic div img{
+    width: 60%;
+}
+p{
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 55%;
+    text-align: center;
 }
 .timeline {
     position: relative;
