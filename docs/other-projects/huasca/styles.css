@@ -1,13 +1,14 @@
 .header_1{
-    background-color: #ddc4f1;
-    width: 100%;
+    background-color: #BBD2EC;
     height: 120px;
+    width: 95%;
     display: flex;
+    justify-content: space-between;
+
 }
 .header_1 img{
-    background-color: #ddc4f1;
     height: 90%;
-    margin: 1%;
+    margin: .4% .8%;
     border-radius: 10%;
 }
 .header_1 ul li{
@@ -21,12 +22,17 @@
 }
 p{
     font-size: clamp(.8rem, 0.35vw + 0.91rem, 1.19rem);
+    BACKGROUND-COLOR: #BBD2EC;
+    PADDING: 30PX;
+    BORDER-RADIUS: 15PX;
 }
 
 .tittle{
+    width: 106.6%;
+    margin: 0 -3.3% 2% -3.3%;
     height: 16vh;
     background-image: url(./img/port1.jpg);
-    padding:8vh 0 4vh 0;
+    padding:8vh 0 4vh 0 ;
     text-align: center;
     color: azure;
     font-size: clamp(1rem, -0.875rem + 8.9vw, 3.5rem);
@@ -40,10 +46,13 @@ p{
 .items_001 ul li{
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 list-style-type: none;
-margin: 1%;
-width: 24%;
+margin: .5%;
+width: 24.5%;
 border: 1px solid #ccc;
 padding: 10px;
+background-color: #BBD2EC;
+border-radius: 15px;
+
 }
 .items_001 ul li img{
 width: 100%;   
@@ -52,11 +61,10 @@ width: 100%;
 .items_001 ul li p{
     font-size: clamp(.8rem, 0.20vw + 0.91rem, 1.19rem);
     font-family: auto;
-    
-
 } 
 .items_001 ul li .u1{
     font-weight: bold;
 min-height: 80px;
 text-align: center;
+
 }
