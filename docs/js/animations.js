@@ -134,30 +134,81 @@ function initReadMore() {
     const masSection = document.getElementById('mas');
 
     if (readMoreBtn && masSection) {
+        // Add icon to button
+        const originalText = readMoreBtn.textContent;
+        readMoreBtn.innerHTML = `
+            <span class="btn-text">${originalText}</span>
+            <span class="btn-icon">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M6 2L6 10M2 6L10 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </span>
+        `;
+
         readMoreBtn.addEventListener('click', () => {
-            if (masSection.classList.contains('active')) {
+            const isActive = masSection.classList.contains('active');
+
+            if (isActive) {
+                // Closing
                 masSection.classList.remove('active');
-                readMoreBtn.textContent = 'Leer más';
+                readMoreBtn.classList.remove('active');
+                readMoreBtn.querySelector('.btn-text').textContent = 'Leer más';
 
-                // Smooth scroll to biografia
+                // Animate icon back to plus
+                const icon = readMoreBtn.querySelector('.btn-icon svg');
+                icon.style.transform = 'rotate(0deg)';
+
+                // Smooth scroll to biografia after collapse
                 setTimeout(() => {
-                    document.querySelector('.biografia').scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
+                    const biografia = document.querySelector('.biografia');
+                    const yOffset = -100;
+                    const y = biografia.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                    window.scrollTo({
+                        top: y,
+                        behavior: 'smooth'
                     });
-                }, 100);
+                }, 300);
             } else {
+                // Opening
                 masSection.classList.add('active');
-                readMoreBtn.textContent = 'Leer menos';
+                readMoreBtn.classList.add('active');
+                readMoreBtn.querySelector('.btn-text').textContent = 'Leer menos';
 
-                // Smooth scroll to expanded content
+                // Animate icon to minus (rotate 45deg to make X, or 90 deg for minus)
+                const icon = readMoreBtn.querySelector('.btn-icon svg');
+                icon.style.transform = 'rotate(45deg)';
+
+                // Smooth scroll to expanded content after opening
                 setTimeout(() => {
-                    masSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'nearest'
+                    const masContent = document.querySelector('.mas-content');
+                    const yOffset = -100;
+                    const y = masContent.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                    window.scrollTo({
+                        top: y,
+                        behavior: 'smooth'
                     });
-                }, 100);
+                }, 400);
             }
+        });
+
+        // Add ripple effect on click
+        readMoreBtn.addEventListener('mousedown', function(e) {
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            this.appendChild(ripple);
+
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+
+            setTimeout(() => ripple.remove(), 600);
         });
     }
 }
