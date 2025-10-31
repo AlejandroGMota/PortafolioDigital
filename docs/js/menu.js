@@ -46,4 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', revealSection);
     revealSection(); // Initial check
+
+    // "¿Quién soy?" button toggle
+    const quienSoyBtn = document.getElementById('quien-soy-btn');
+    const heroDescription = document.getElementById('hero-description');
+
+    if (quienSoyBtn && heroDescription) {
+        quienSoyBtn.addEventListener('click', () => {
+            if (heroDescription.style.display === 'none') {
+                heroDescription.style.display = 'block';
+                quienSoyBtn.textContent = 'Ocultar';
+                // Smooth animation
+                heroDescription.style.opacity = '0';
+                setTimeout(() => {
+                    heroDescription.style.transition = 'opacity 0.5s ease';
+                    heroDescription.style.opacity = '1';
+                }, 10);
+            } else {
+                heroDescription.style.opacity = '0';
+                setTimeout(() => {
+                    heroDescription.style.display = 'none';
+                    quienSoyBtn.textContent = '¿Quién soy?';
+                }, 500);
+            }
+        });
+    }
 });
