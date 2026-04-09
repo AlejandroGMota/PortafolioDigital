@@ -20,7 +20,7 @@ export const techStackData = [
         <path d="M7 10L10 13L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    items: ['Node.js', 'Go (Golang) + Gorilla Mux', 'REST APIs'],
+    items: ['Node.js', 'Go (Golang) + Gorilla Mux', 'Python', 'REST APIs'],
   },
   {
     title: 'Bases de Datos',
@@ -42,7 +42,7 @@ export const techStackData = [
         <path d="M2 7L12 12L22 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    items: ['Git & GitHub', 'Docker', 'Kubernetes', 'GitHub Actions (CI/CD)', 'Prometheus (monitoreo)'],
+    items: ['Git & GitHub', 'Docker', 'Kubernetes', 'AWS', 'GitHub Actions (CI/CD)', 'Prometheus (monitoreo)'],
   },
   {
     title: 'Message Brokers & Testing',

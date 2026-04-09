@@ -1,6 +1,6 @@
 export const projectsData = {
   title: 'Explora Mi Trabajo',
-  description: 'Proyectos, contribuciones open source y artículos técnicos. Desarrollo backend, microservicios, DevOps y más.',
+  description: 'Proyectos técnicos, open source y un blog donde mezclo desarrollo, producto y negocios digitales.',
   icon: (
     <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <polyline points="7 7 2 12 7 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

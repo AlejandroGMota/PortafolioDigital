@@ -14,13 +14,13 @@ export const experienceData = [
   },
   {
     company: 'Celinki',
-    role: 'Emprendedor Digital',
+    role: 'Emprendedor — 3 años',
     description: (
       <>
-        Gestión completa de negocio digital especializado en venta y reparación de accesorios para celulares.
-        <strong> Marketing digital</strong>, optimización de operaciones, análisis financiero,
-        y desarrollo de plataformas de <strong>e-commerce</strong>. Experiencia práctica en
-        estrategia comercial y experiencia del cliente.
+        Fundé y opero un negocio de venta y reparación de accesorios para celulares.
+        Responsable de <strong>marketing</strong>, operaciones y finanzas.
+        Me dio perspectiva real sobre lo que significa construir algo que funcione —
+        no solo técnicamente, sino <strong>comercialmente</strong>.
       </>
     ),
     tags: ['E-commerce', 'Marketing Digital', 'Operaciones', 'Análisis Financiero'],

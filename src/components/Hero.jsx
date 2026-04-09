@@ -28,10 +28,11 @@ export default function Hero() {
               className="hero-description"
               style={{ animation: 'fadeInUp 0.5s ease-out' }}
             >
-              Construyo sistemas backend robustos con <strong>Go</strong> y <strong>Node.js</strong>,
-              arquitecturas de <strong>microservicios</strong> escalables, y gestiono infraestructura
-              completa con <strong>Docker</strong>, <strong>Kubernetes</strong> y pipelines de <strong>CI/CD</strong>.
-              Mi enfoque combina desarrollo técnico de alto nivel con comprensión estratégica del negocio.
+              Desarrollo backend con <strong>Go</strong> y <strong>Node.js</strong>, arquitecturas de{' '}
+              <strong>microservicios</strong> y pipelines de <strong>CI/CD</strong> — pero también
+              sé lo que significa lanzar y operar un negocio real. Con <strong>Celinki</strong>{' '}
+              viví el lado comercial: marketing, operaciones y producto. Eso me da una perspectiva
+              que va más allá del código.
             </p>
           )}
         </div>
